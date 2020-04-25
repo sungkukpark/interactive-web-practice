@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Steps</title>
+    <style>
+        h1 {
+            color: white;
+        }
+        body {
+            background: #222;
+        }
+        @keyframes anim-hero {
+            to {
+                background-position: -1536px 0;
+            }
+        }
+        .hero {
+            width: 256px;
+            height: 256px;
+            background: url('images/walk.png') no-repeat 0 0 / auto 256px;
+            animation: anim-hero .5s infinite steps(6);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animation Steps</h1>
+    <div class="hero"></div>
+</body>
+</html>
