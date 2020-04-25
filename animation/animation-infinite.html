@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Infinite Example</title>
+    <style>
+        /* Define animation here */
+        @keyframes sample-ani {
+            0% {
+                transform: translate(0, 0);
+            }
+            33.3% {
+                transform: translate(300px, 0);
+            }
+            66.6% {
+                transform: translate(300px, 300px);
+            }
+            100% {
+                transform: translate(0, 300px);
+            }
+        }
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            background: #fff000;
+
+            /* Set animation to use */
+            animation: sample-ani 2s linear infinite alternate-reverse;
+        }
+        .box:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animation Infinite</h1>
+    <div class="box"></div>
+</body>
+</html>
