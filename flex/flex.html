@@ -6,6 +6,36 @@
     <title>CSS Flex</title>
     <style>
         .container {
+            display: flex;
+            flex-direction: row;
+
+            /* 시작점에 정렬 (기본값) */
+            /* justify-content: flex-start; */
+
+            /* 끝에 정렬 */
+            /* justify-content: flex-end; */
+
+            /* 가운데 정렬 */
+            justify-content: center;
+
+            /* 서로 균일한 거리를 갖고 정렬 */
+            /* justify-content: space-between; */
+
+            /* 서로 좌우 균일한 여백을 갖고 정렬 */
+            /* justify-content: space-around; */
+
+            /* 축의 양쪽 수직 방향으로 늘려 정렬 (기본값)  */
+            /* align-items: stretch; */
+
+            /* 축의 양쪽 수직 방향으로 가운데에 정렬  */
+            align-items: center;
+
+            /* 축의 양쪽 수직 방향으로 시작점에 정렬  */
+            /* align-items: flex-start; */
+
+            /* 축의 양쪽 수직 방향으로 끝에 정렬  */
+            /* align-items: flex-end; */
+
             height: 80vh;
             background: grey
         }
