@@ -10,18 +10,12 @@
             0% {
                 transform: translate(0, 0);
             }
-            25% {
+            50% {
                 transform: translate(300px, 0);
             }
-            50% {
-                transform: translate(300px, 300px);
-                background: red;
-            }
-            75% {
-                transform: translate(0, 300px);
-            }
             100% {
-                transform: translate(0, 0px);
+                transform: translate(300px, 300px);
+                background: purple;
             }
         }
         .box {
@@ -38,7 +32,7 @@
             border-radius: 50%;
             
             /* Set animation to use */
-            animation: sample-ani 2s linear infinite;
+            animation: sample-ani 2s linear forwards;
         }
     </style>
 </head>
