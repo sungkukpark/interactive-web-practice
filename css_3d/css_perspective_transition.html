@@ -16,49 +16,55 @@
 
         perspective: 500px;
       }
+      .world:hover .card {
+        /* to state */
+        transform: rotateY(180deg);
+      }
       .card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
 
         width: 150px;
         height: 150px;
-        background: red;
         margin: 1em;
 
         border-radius: 0.5em;
         font-size: 2rem;
 
-        transition: 1s;
         /* from state */
         transform: rotateY(0deg);
+        transform-style: preserve-3d;
+        transition: 1s;
       }
-      .world:hover .card {
-        /* to state */
+      .card-side {
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        backface-visibility: hidden;
+      }
+      .card-side-front {
+        z-index: 1;
+        background: white;
+      }
+      .card-side-back {
+        background: red;
         transform: rotateY(180deg);
       }
     </style>
   </head>
   <body>
-    <h1>CSS Perspective</h1>
+    <h1>CSS Perspective with Transition</h1>
     <div class="world">
       <div class="card">
-        <img
-          src="https://source.unsplash.com/random/150x150?sig=1"
-          alt="random-image"
-        />
-      </div>
-      <div class="card">
-        <img
-          src="https://source.unsplash.com/random/150x150?sig=2"
-          alt="random-image"
-        />
-      </div>
-      <div class="card">
-        <img
-          src="https://source.unsplash.com/random/150x150?sig=3"
-          alt="random-image"
-        />
+        <div class="card-side card-side-front">Front</div>
+        <div class="card-side card-side-back">Back</div>
       </div>
     </div>
   </body>
