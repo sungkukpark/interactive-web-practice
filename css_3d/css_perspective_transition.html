@@ -18,7 +18,7 @@
       }
       .world:hover .card {
         /* to state */
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
       }
       .card {
         position: relative;
@@ -34,6 +34,9 @@
         transform: rotateY(0deg);
         transform-style: preserve-3d;
         transition: 1s;
+
+        /* Door-like transition */
+        /* transform-origin: left; */
       }
       .card-side {
         position: absolute;
